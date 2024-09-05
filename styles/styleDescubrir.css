@@ -1,0 +1,550 @@
+*/* Reseteo de márgenes y rellenos */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  min-height: 100vh;
+  overflow: scroll;
+}
+
+/* Contenedor principal con grid layout */
+.main-container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "header header header header"
+    "main main main main"
+    "footer footer footer footer";
+  gap: 10px;
+}
+
+/* Estilos para el header */
+header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: none;
+}
+
+.header-title {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.header-title h1 {
+  color: #b63ce2;
+  font-family: sans-serif;
+}
+
+.header-title img {
+  cursor: pointer;
+}
+
+.menu-desaparecer {
+  width: 100%;
+  height: 200px;
+  display: none;
+  align-items: start;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.menu-desaparecer > * {
+  color: #484848;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.menu-aparecer {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  flex-direction: column;
+  background-color: #202020;
+}
+
+.menu-aparecer > * {
+  color: #ececec;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: bold;
+  height: 25%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 10px;
+  transition: background 0.3s linear, color 0.3s linear;
+}
+
+.menu-aparecer > a:active {
+  background-color: #b63ce2;
+  color: #fff;
+}
+
+/* Estilos para el main */
+main {
+  background-color: #fafafa;
+  border: none;
+  grid-area: main;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  padding: 10px;
+  gap: 50px;
+}
+
+/* Estilos para el banner */
+.banner-front {
+  width: 400px;
+  height: 1950px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 0 20px;
+  box-shadow: 0 4px 8px rgb(221, 221, 221);
+}
+
+.banner-front > div {
+  width: 90%;
+  height: 200px;
+}
+
+.banner-front > img {
+  width: 90%;
+  height: 350px;
+}
+
+.banner-front > .banner-info1,
+.banner-front > .banner-info2,
+.banner-front > .banner-info3 {
+  font-family: sans-serif;
+  color: #8223a4;
+  display: flex;
+  align-items: center;
+}
+
+.banner-info2,
+.banner-info3 {
+  flex-direction: column;
+  gap: 30px;
+}
+
+.banner-info2 > a,
+.banner-info3 > a {
+  width: 80%;
+  height: 50px;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  font-family: monospace;
+  background-color: #b63ce2;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* Estilos para el último bloque */
+.ultimo {
+  width: 432px;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ultimo h3 {
+  color: #484848;
+  font-family: sans-serif;
+}
+
+.ultimo-cards {
+  max-width: 90%;
+  min-height: 245px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  font-family: sans-serif;
+  gap: 50px;
+}
+
+.ultimo-cards > * {
+  background-color: #fff;
+  width: 90%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: -1px 8px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.ultimo-cards > * > * {
+  width: 100%;
+}
+
+.content {
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: scroll;
+}
+
+.content > p {
+  max-width: 90%;
+  max-height: 80%;
+  text-wrap: wrap;
+  overflow-wrap: break-word; /* Asegura que las palabras largas se ajusten dentro del contenedor */
+  word-wrap: break-word;
+}
+
+.autor {
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #b63ce2;
+  color: #fff;
+}
+
+.autor > * {
+  margin: 0 20px;
+}
+
+.autor .hearth {
+  width: 50px;
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.autor .hearth > i {
+  cursor: pointer;
+}
+
+.autor .profile {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* Estilos para el footer */
+footer {
+  grid-area: footer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  background-color: #202020;
+}
+
+.contact {
+  width: 432px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-family: sans-serif;
+  color: #fff;
+}
+
+.contact > form {
+  width: 80%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.contact > form > input {
+  height: 50px;
+}
+
+.contact > form > #contact-email {
+  width: 93%;
+  padding: 0 10px;
+  height: 30px;
+}
+
+.contact > form > textarea {
+  width: 93%;
+  padding: 5px 10px;
+  height: 200px;
+  resize: none;
+}
+
+.contact > form > .submit {
+  width: 93%;
+  background-color: #b63ce2;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: bold;
+  font-family: monospace;
+  cursor: pointer;
+}
+
+.contact > form > .submit:active {
+  background-color: #6d1e8a;
+}
+
+.menu-down {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  gap: 10px;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu-down > * {
+  text-decoration: none;
+  color: #959595;
+  font-weight: bold;
+  margin-left: 45px;
+}
+
+.social-media {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1.7em;
+  height: 50px;
+}
+
+.social-media > * {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.social-media > :first-child:hover {
+  color: rgb(21, 106, 224);
+}
+
+.social-media > :nth-child(2):hover {
+  color: #8223a4;
+}
+
+.social-media > :nth-child(3):hover {
+  color: #ca2037;
+}
+
+.social-media > :nth-child(4):hover {
+  color: #d0d0d0;
+}
+
+.copy {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #e1e1e1;
+  font-size: 1em;
+}
+
+/* Estilos para el botón del menú */
+#btn-menu {
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.menu-pantalla-grande {
+  display: none;
+}
+
+/* Media Queries */
+
+/* Ajustes para pantallas pequeñas (mínimo 768px) */
+@media (min-width: 768px) {
+  .banner-front {
+    width: 768px;
+    height: auto;
+    padding: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 100px;
+  }
+
+  .banner-front > div {
+    width: 40%;
+    height: 400px;
+    text-align: center;
+  }
+
+  .banner-front > img {
+    width: 50%;
+    height: 400px;
+  }
+
+  .ultimo {
+    width: 100%;
+  }
+
+  .ultimo-cards {
+    width: 768px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .ultimo-cards > * {
+    width: 45%;
+  }
+
+  .contact {
+    width: 60%;
+    height: auto;
+  }
+
+  .social-media {
+    font-size: 2em;
+  }
+}
+
+/* Ajustes para pantallas medianas (mínimo 1024px y máximo 1500px) */
+@media (min-width: 1024px) and (max-width: 1500px) {
+  #btn-menu {
+    display: none;
+  }
+
+  footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 50px;
+  }
+
+  .contact {
+    width: 40%;
+    height: auto;
+  }
+
+  .social-media {
+    font-size: 2em;
+  }
+
+  .menu-pantalla-grande {
+    display: flex;
+    width: 30%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .menu-pantalla-grande > a {
+    text-decoration: none;
+    color: #202020;
+    font-weight: bold;
+    font-family: sans-serif;
+  }
+}
+
+/* Ajustes para pantallas grandes (mínimo 1500px) */
+@media (min-width: 1500px) {
+  #btn-menu {
+    display: none;
+  }
+  .banner-front {
+    width: 1200px;
+  }
+
+  .banner-front > div {
+    width: 25%;
+  }
+
+  .banner-front > img {
+    height: 650px;
+  }
+
+  .ultimo {
+    width: 100%;
+  }
+
+  .ultimo-cards {
+    width: 1200px;
+  }
+
+  .ultimo-cards > * {
+    width: 30%;
+  }
+
+  footer {
+    padding: 100px 0 0 0;
+  }
+
+  .contact {
+    width: 30%;
+  }
+
+  .menu-pantalla-grande {
+    display: flex;
+    width: 30%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .menu-pantalla-grande > a {
+    text-decoration: none;
+    color: #202020;
+    font-weight: bold;
+    font-family: sans-serif;
+  }
+}
+
+/* Ajustes para pantallas extra grandes (mínimo 1920px) */
+@media (min-width: 1920px) {
+  footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .contact {
+    width: 20%;
+  }
+}
+
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Color del área de fondo */
+
+}

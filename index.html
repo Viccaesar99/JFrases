@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/styleIndex.css" />
+    <title>JFrases | Inicio</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <header>
+        <div class="header-title">
+          <h1>JFrases</h1>
+          <i id="btn-menu" class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+          <div class="menu-pantalla-grande">
+            <a href="#">Inicio</a>
+            <a href="pages/descubrir.html">Descubrir</a>
+            <a href="pages/escribir.html">Escribir</a>
+          </div>
+        </div>
+        <div class="menu-desaparecer" id="menu">
+          <a href="#">Inicio</a>
+          <a href="pages/descubrir.html">Descubrir</a>
+          <a href="pages/escribir.html">Escribir</a>
+        </div>
+      </header>
+      <main>
+        <div class="banner-front" id="banner-front">
+            <img src="assets/Comunity.jpeg" alt="Imagen de dos personas con una hoja de papel">
+            <div class="banner-info1">
+                <h2>Unete a la gran comunidad de frases, inspirate e inspira inspira a otros.</h2>
+            </div>
+            <img src="assets/Writer.jpeg" alt="Imagen de persona escribiendo">
+            <div class="banner-info2">
+                <h2>Da rienda suelta a tu experiencia e imaginacion o inspirate y escribe las mejores frases.</h2>
+                <a href="pages/escribir.html">Escribir</a>
+            </div>
+            <img src="assets/Reader.jpeg" alt="Imagen de persona leyendo">
+            <div class="banner-info3">
+                <h2>Encuentra las mejores frases que tiene esta gran comunidad para ofrecerte.</h2>
+                <a href="/pages/descubrir.html">Descubrir</a>
+            </div>
+
+        </div>
+        <div class="ultimo">
+          <h3>Ultimas agregadas</h3>
+          <div class="ultimo-cards">
+            <div class="card">
+              <div class="content">
+                <p>
+                  "No es que tengamos poco tiempo, sino que perdemos mucho."
+                </p>
+              </div>
+              <div class="autor">
+                <div class="name">Autor: Seneca</div>
+                <div class="hearth">
+                  <i id="icon" class="icon fa-regular fa-heart"></i>
+                  <p>915</p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="content">
+                <p>
+                  "No son las cosas las que nos perturban, sino nuestra opinión
+                  sobre las cosas."
+                </p>
+              </div>
+              <div class="autor">
+                <div class="name">Autor: Epicteto</div>
+                <div class="hearth">
+                  <i id="icon" class="icon fa-regular fa-heart"></i>
+                  <p>343</p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="content">
+                <p>
+                  "La felicidad de tu vida depende de la calidad de tus
+                  pensamientos."
+                </p>
+              </div>
+              <div class="autor">
+                <div class="name">Autor: Marco Aurelio</div>
+                <div class="hearth">
+                  <i id="icon" class="icon fa-regular fa-heart"></i>
+                  <p>201</p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="content">
+                <p>
+                  "El hombre que sufre antes de ser necesario, sufre más de lo
+                  que es necesario."
+                </p>
+              </div>
+              <div class="autor">
+                <div class="name">Autor: Seneca</div>
+                <div class="hearth">
+                  <i id="icon" class="icon fa-regular fa-heart"></i>
+                  <p>435</p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="content">
+                <p>
+                  "La libertad es la única riqueza que no se puede arrebatar."
+                </p>
+              </div>
+              <div class="autor">
+                <div class="name">Autor: Epicteto</div>
+                <div class="hearth">
+                  <i id="icon" class="icon fa-regular fa-heart"></i>
+                  <p>507</p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="content">
+                <p>"No hay nada imposible para el que lo intenta."</p>
+              </div>
+              <div class="autor">
+                <div class="name">Autor: Alejandro Magno</div>
+                <div class="hearth">
+                  <i id="icon" class="icon fa-regular fa-heart"></i>
+                  <p>340</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div class="menu-down">
+          <a href="#">Inicio</a>
+          <a href="pages/descubrir.html">Descubrir</a>
+          <a href="pages/escribir.html">Escribir</a>
+          <a href="#">Politica de privacidad</a>
+          <a href="#">Sobre Nosotros</a>
+        </div>
+        <div class="contact">
+          <h4>Contacto</h4>
+          <form action="" class="contact-form">
+            <label for="email" id="label-email">Email</label>
+            <input type="email" name="email" id="contact-email" required />
+            <textarea
+              name="contact-box"
+              id="contact-box"
+              placeholder="Mensaje..."
+              required
+            ></textarea>
+            <input type="submit" value="Enviar" class="submit" />
+          </form>
+        </div>
+        <div class="social-media">
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-youtube"></i>
+          <i class="fa-brands fa-x-twitter"></i>
+        </div>
+        <div class="copy">
+          <p>&copy; Plantilla html - 2024</p>
+        </div>
+      </footer>
+      <script
+        src="https://kit.fontawesome.com/62bb77c184.js"
+        crossorigin="anonymous"
+      ></script>
+      <script src="scripts/mainIndex.js"></script>
+    </div>
+  </body>
+</html>

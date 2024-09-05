@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/styleEscribir.css" />
+    <title>JFrases | Escribir</title>
+  </head>
+
+  <body>
+    <div class="main-container">
+      <header>
+        <div class="header-title">
+          <h1>JFrases</h1>
+          <i id="btn-menu" class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+          <div class="menu-pantalla-grande">
+            <a href="../index.html">Inicio</a>
+            <a href="descubrir.html">Descubrir</a>
+            <a href="#">Escribir</a>
+          </div>
+        </div>
+        <div class="menu-desaparecer" id="menu">
+          <a href="../index.html">Inicio</a>
+          <a href="descubrir.html">Descubrir</a>
+          <a href="#">Escribir</a>
+        </div>
+      </header>
+      <main>
+        <div class="escribir-hiden" id="escribir-container">
+          <div class="escribir">
+            <div class="head-escribir">
+              <h3>Escribir</h3>
+              <i class="fa-solid fa-xmark" id="ocultar-escribir"></i>
+            </div>
+            <div class="escribir-input">
+              <input
+                type="text"
+                id="escritor"
+                class="escritor"
+                placeholder="Autor"
+                maxlength="40"
+              />
+              <textarea
+                id="poema"
+                class="poema"
+                placeholder="Escribe la frase..."
+                maxlength="2500"
+              ></textarea>
+              <button class="crear" onclick="agregarPoema()">Publicar</button>
+            </div>
+          </div>
+        </div>
+        <div class="poesias">
+          <div class="frases-head">
+            <h3>Mis Frases</h3>
+            <i id="mostrar-escribir" class="fa-solid fa-plus"></i>
+          </div>
+          <div class="poesias-card" id="poesias-card">
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div class="menu-down">
+          <a href="../index.html">Inicio</a>
+          <a href="descubrir.html">Descubrir</a>
+          <a href="#">Escribir</a>
+          <a href="#">Política de privacidad</a>
+          <a href="#">Sobre Nosotros</a>
+        </div>
+        <div class="contact">
+          <h4>Contacto</h4>
+          <form action="" class="contact-form">
+            <label for="contact-email">Email</label>
+            <input type="email" name="email" id="contact-email" required />
+            <textarea
+              name="contact-box"
+              id="contact-box"
+              placeholder="Mensaje..."
+              required
+            ></textarea>
+            <input type="submit" value="Enviar" class="submit" />
+          </form>
+        </div>
+        <div class="social-media">
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-youtube"></i>
+          <i class="fa-brands fa-x-twitter"></i>
+        </div>
+        <div class="copy">
+          <p>&copy; Victory Nuñez - 2024</p>
+        </div>
+      </footer>
+      <script
+        src="https://kit.fontawesome.com/62bb77c184.js"
+        crossorigin="anonymous"
+      ></script>
+      <script src="/scripts/mainEscribir.js"></script>
+    </div>
+  </body>
+</html>

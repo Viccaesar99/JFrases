@@ -1,0 +1,602 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  min-height: 100vh;
+  overflow: auto; /* Cambiado de scroll a auto */
+}
+
+.main-container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "header header header header"
+    "main main main main"
+    "footer footer footer footer";
+}
+
+.main-container header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: none;
+}
+
+.main-container header .header-title {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.main-container header .header-title h1 {
+  color: #b63ce2;
+  font-family: sans-serif;
+}
+
+.main-container header .header-title img {
+  cursor: pointer;
+}
+
+.main-container header .menu-desaparecer{
+  width: 100%;
+  height: 200px;
+  display: none;
+  align-items: start;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.main-container header .menu-desaparecer > * {
+  color: #484848;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.main-container header .menu-aparecer {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  flex-direction: column;
+  background-color: #202020;
+}
+
+.main-container header .menu-aparecer > * {
+  color: #ececec;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: bold;
+  height: 25%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 10px;
+  transition: background 0.3s linear, color 0.3s linear;
+}
+
+.main-container header .menu-aparecer > a:active {
+  background-color: #b63ce2;
+  color: #fff;
+}
+
+main {
+  border: none;
+  background-color: #fafafa;
+  grid-area: main;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  padding: 10px;
+  gap: 50px;
+}
+
+main .escribir-hiden {
+  display: none;
+}
+
+main .escribir-container {
+  position: absolute;
+  width: 100%;
+  height: 430px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main .escribir {
+  z-index: 12;
+  width: 350px;
+  font-family: sans-serif;
+  height: 300px;
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 50px;
+  box-shadow: 0 4px 8px #c4c4c4;
+}
+
+main .escribir .head-escribir {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main .escribir .head-escribir > i {
+  font-size: 1.3em;
+  cursor: pointer;
+}
+
+main .escribir .escribir-input {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+main .escribir .escribir-input .escritor {
+  width: 80%;
+  border: none;
+  border-bottom: 2px solid black;
+  font-family: sans-serif;
+  padding: 10px 0 0 10px;
+  height: 50px;
+  outline: none;
+}
+
+main .escribir .escribir-input .poema {
+  width: 80%;
+  border: none;
+  border-bottom: 2px solid black;
+  font-family: sans-serif;
+  padding: 10px 0 0 10px;
+  height: 200px;
+  outline: none;
+  resize: none;
+}
+
+main .escribir .escribir-input .crear {
+  width: 80%;
+  border: none;
+  border-radius: 8px;
+  background-color: #b63ce2;
+  color: #fff;
+  font-family: monospace;
+  font-weight: bold;
+  height: 70px;
+  cursor: pointer;
+  z-index: 5001;
+  
+}
+
+main .escribir .escribir-input .crear:active {
+  background-color: #681e83;
+}
+
+main .poesias {
+  width: 432px;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: start;
+}
+
+main .poesias .frases-head {
+  width: 90%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+}
+
+main .poesias .frases-head > h3 {
+  color: #484848;
+  font-family: sans-serif;
+}
+
+main .poesias .frases-head > i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  font-size: 1.2em;
+  color: #fff;
+  background-color: #b63ce2;
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgb(119, 119, 119);
+}
+
+main .poesias-card {
+  width: 100%;
+  min-height: 245px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  font-family: sans-serif;
+  gap: 50px;
+}
+
+main .poesias-card > * {
+  width: 90%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: -1px 8px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  background-color: #fff;
+  transition: opacity .3s ease;
+}
+
+.card-hide {
+  opacity: 0;
+}
+
+main .poesias-card > * > * {
+  width: 100%;
+}
+
+main .poesias-card .content {
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: scroll;
+}
+
+main .poesias-card .content > p {
+  max-width: 90%;
+  max-height: 80%;
+  text-wrap: wrap;
+  overflow-wrap: break-word; /* Asegura que las palabras largas se ajusten dentro del contenedor */
+  word-wrap: break-word;
+}
+
+main .poesias-card .autor {
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #b63ce2;
+  color: #fff;
+}
+
+main .poesias-card .autor > * {
+  margin-left: 20px;
+}
+
+main .poesias-card .autor .profile {
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+}
+
+main .poesias-card .autor .delete {
+  margin-right: 20px;
+  cursor: pointer;
+  font-size: 1.1em;
+  z-index: 5000;
+}
+
+footer {
+  gap: 10px;
+  grid-area: footer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  background-color: #202020;
+}
+
+footer .contact {
+  width: 432px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-family: sans-serif;
+  color: #fff;
+}
+
+footer .contact > form {
+  width: 80%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+footer .contact > form > * {
+  margin-left: 10px;
+}
+
+footer .contact > form > input {
+  height: 50px;
+}
+
+footer .contact > form > #contact-email {
+  width: 93%;
+  padding: 0 10px;
+  height: 30px;
+}
+
+footer .contact > form > textarea {
+  width: 93%;
+  padding: 5px 10px;
+  height: 200px;
+  resize: none;
+}
+
+footer .contact > form > .submit {
+  background-color: #b63ce2;
+  width: 93%;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: bold;
+  font-family: monospace;
+  cursor: pointer;
+}
+
+footer .contact > form > .submit:active {
+  background-color: #6d1e8a;
+}
+
+footer .menu-down {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  gap: 10px;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+footer .menu-down > * {
+  text-decoration: none;
+  color: #959595;
+  font-weight: bold;
+  margin-left: 45px;
+}
+
+footer .social-media {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1.7em;
+  height: 50px;
+}
+
+footer .social-media > * {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+footer .social-media > :first-child:hover {
+  color: rgb(21, 106, 224);
+}
+
+footer .social-media > :nth-child(2):hover {
+  color: #8223a4;
+}
+
+footer .social-media > :nth-child(3):hover {
+  color: #ca2037;
+}
+
+footer .social-media > :nth-child(4):hover {
+  color: #d0d0d0;
+}
+
+footer > .copy {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #e1e1e1;
+  font-size: 1em;
+}
+
+.alert {
+  position: fixed;
+  width: 350px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  right: 0;
+  top: 440px;
+  transition: opacity 0.3s ease-in;
+  font-family: sans-serif;
+  border-bottom: 2px solid red;
+  box-shadow: 0 4px 8px rgba(174, 174, 174, 0.508);
+  z-index: 100;
+}
+
+.fa-trash {
+  z-index: 1;
+}
+.alert-hide {
+  opacity: 0;
+}
+
+#btn-menu {
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.menu-pantalla-grande {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  main .poesias {
+    width: 800px;
+  }
+  main .poesias-card {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    > *{
+      width: 40%;
+    }
+  }
+
+  main .escribir {
+    width: 500px;
+    height: 650px;
+    position: absolute;
+    top: 50px;
+  }
+
+  .contact {
+    width: 60%;
+    height: auto;
+  }
+
+  .social-media {
+    font-size: 2em;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1500px) {
+  main .poesias {
+    width: 1000px;
+  }
+  main .poesias-card{
+    > *{
+      width: 30%;
+    }
+  }
+
+  #btn-menu{
+    display: none;
+  }
+  footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 50px;
+  }
+
+  .contact {
+    width: 40%;
+    height: auto;
+  }
+
+  .social-media {
+    font-size: 2em;
+  }
+  .menu-pantalla-grande {
+    display: flex;
+    width: 30%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    > a {
+      text-decoration: none;
+      color: #202020;
+      font-weight: bold;
+      font-family: sans-serif;
+    }
+  }
+
+}
+
+@media (min-width: 1500px) {
+  main .poesias {
+    width: 1200px;
+  }
+  main .poesias-card{
+    > *{
+      width: 28%;
+    }
+  }
+  #btn-menu {
+    display: none;
+  }
+
+  footer {
+    padding: 100px 0 0 0;
+  }
+
+  .contact {
+    width: 30%;
+  }
+  .menu-pantalla-grande {
+    display: flex;
+    width: 30%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    > a {
+      text-decoration: none;
+      color: #202020;
+      font-weight: bold;
+      font-family: sans-serif;
+    }
+  }
+  
+
+
+}
+
+
+@media (min-width: 1920px) { 
+  footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .contact {
+    width: 20%;
+  }
+
+
+
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Color del área de fondo */
+
+}

@@ -1,0 +1,22 @@
+﻿Documentación
+
+Esta es una plantilla web hecha con html, css y javascript. 
+
+Cuenta con los apartados: Inicio, Descubrir y Escribir.
+
+Inicio: Tiene un banner con dos llamadas a la accion y tres imagenes con un parrafo cada una, tambien cuenta con un apartado de nuevas frases publicadas, pero las frases ya estan establecidas en en el html pues solo es una plantilla.
+
+Descubrir: Es un apartado que tiene todas las frases y esta dividido por categorias, y como mencione antes todas las frases estan ya preestablecidas en el html. Estar dividido por categorias es una funcionalidad creada con la plantilla pero puede ser editado para cambiar la idea, como por ejemplo agregar una barra de busqueda.
+
+Escribir: Deja un apartado para las frases creadas por el usuario las, guarda localmente pero no son subidas a las paginas principales.
+
+El footer y el header son el mismo para todas las paginas.
+
+El footer o pie de pagina incluye un apartado para establecer contacto mas la funcionalidad de establecer contacto no viene incluida solo viene el apartado grafico. Tambien cuenta con un menu para navegar entre paginas, las paginas “Politica de privacidad” y “Sobre nosotros” no estan hechas, puede hacerlas a su gusto.
+
+El header o cabecera tiene el titulo de la pagina y un menu para navegar entre las paginas.
+
+La pagina es responsive se adapta a varios dispositivos, en las pantallas mas pequeñas el menu se convierte en un menu plegable.
+
+Las imagenes son libres de derecho de autor.
+
