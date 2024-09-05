@@ -96,6 +96,7 @@ function cambiaIcono(icon, class1, class2) {
 function mostrarEscribir() {
   escribirCont.classList.toggle("escribir-container");
   escribirCont.classList.toggle("escribir-hiden");
+  console.log("ejecutando");
 }
 
 mostEscribir.addEventListener("click", () => {
@@ -105,6 +106,7 @@ mostEscribir.addEventListener("click", () => {
 
 ocultEscribir.addEventListener("click", () => {
   mostrarEscribir();
+  
 
 });
 
